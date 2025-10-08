@@ -1,5 +1,8 @@
 ### 1. 변수 선언
 **1. var**
+- 재할당 가능
+- 타입 변경 불가능
+- 런타임 시점에 값 확정
 ```dart
 void main () {
   var a = 'this is string';
@@ -12,15 +15,26 @@ void main () {
 }
 ```
 **2. final**
+- 재할당 불가능하나, 내부값은 변경 가능
+- 타입 변경 불가능
+- 런타임 시점에 값 확정
 ```dart
 void main() {
-  final name = '기존 이름';
+  final list = [1, 2, 3];
 
   // ❌ 재할당 불가능
-  name = '재할당 이름'; -> Error: Can't assign to the final variable 'name'.
+  list = [4, 5, 6]; -> Error: Can't assign to the final variable 'list'.
+
+  // ❌ 타입 변경 불가능
+  list = "this is string"; -> Error: Can't assign to the final variable 'list'.
+
+  // ✅ 내부값 변경 가능
+  list[0] = 0;
 }
 ```
 **3. const**
+- 재할당, 타입 변경 불가능
+- 컴파일 시점에 값 확정
 ```dart
 void main() {
   const name = '기존 이름';
@@ -30,6 +44,8 @@ void main() {
 }
 ```
 **4. dynamic**
+- 재할당, 타입 변경 가능
+- 런타임 시점에 값 고정
 ```dart
 void main() {
   dynamic a = 'this is string';
