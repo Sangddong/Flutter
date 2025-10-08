@@ -1,5 +1,5 @@
 ### 2. 타입
-1. int
+**1. int**
 ```dart
 void main() {
   int a = 10;
@@ -11,7 +11,7 @@ void main() {
   print(a / b);  // 2
 }
 ```
-2. double
+**2. double**
 ```dart
 void main() {
   double a = 10.5;
@@ -23,7 +23,7 @@ void main() {
   print(a / b);  // 2.1
 }
 ```
-3. String
+**3. String**
 ```dart
 void main() {
   String str1 = "";
@@ -53,7 +53,7 @@ void main() {
   dynamic String str4 = "error";
 }
 ```
-4. bool
+**4. bool**
 ```dart
 void main() {
   bool isTrue = true;
@@ -63,5 +63,14 @@ void main() {
   print(isFalse);  \\ true
 }
 ```
-5. 
-6. DateTime
+5. DateTime
+```dart
+void main () async {
+  DateTime now1 = DateTime.now();
+  await Future.delayed(Duration(seconds: 3));
+  DateTime now2 = DateTime.now();
+  
+  print(now1);  // 2025-10-08 17:46:25.948
+  print(now2);  // 2025-10-08 17:46:29.310
+}
+```
